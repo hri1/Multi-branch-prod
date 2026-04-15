@@ -23,7 +23,7 @@ pipeline {
             when { branch 'main'}
             steps {
                 script {
-                    env.IMAGE_TAG = "build-${BUILD_NUMBER}
+                    env.IMAGE_TAG = "build-${BUILD_NUMBER}"
                     
                     withCredentials([usernamePassword(
                        credentialsID: 'dockerhub-creds',
