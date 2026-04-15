@@ -28,7 +28,7 @@ pipeline {
                     withCredentials([usernamePassword(
                        credentialsID: 'dockerhub-creds',
                        usernameVariable: 'DOCKER_USER',
-                       passwordVariable: 'DOCKER_PASS
+                       passwordVariable: 'DOCKER_PASS'
                     )]) {
                         sh """
                           docker build -t ${IMAGE_NAME}:${IMAGE_TAG} .
